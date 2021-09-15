@@ -13,7 +13,7 @@
 }
 
 #forkongithub a:hover {
-    background: #18bc9c;
+    background: #2381c0;
     color: #fff;
 }
 
@@ -86,4 +86,17 @@
 .weixin:hover img.qrcode {
     transform: scale(1);
     opacity: 1;
+}
+
+#profile {
+    display: block;
+    width: 400px;
+    height: 400px;
+    background: #E6E7ED;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
 }

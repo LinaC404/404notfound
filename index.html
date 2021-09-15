@@ -17,6 +17,74 @@
     <!-- Theme CSS -->
     <link href="css/freelancer.min.css" rel="stylesheet">
 
+
+    <!-- GitHub Ribbon -->
+    <style>#forkongithub a {
+        background: #B4B4AF;
+        color: #fff;
+        text-decoration: none;
+        font-family: arial, sans-serif;
+        text-align: center;
+        font-weight: bold;
+        padding: 5px 40px;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        position: relative;
+        transition: 0.5s;
+    }
+    
+    #forkongithub a:hover {
+        background: #18bc9c;
+        color: #fff;
+    }
+    
+    #forkongithub a::before,
+    #forkongithub a::after {
+        content: "";
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 1px;
+        left: 0;
+        height: 1px;
+        background: #fff;
+    }
+    
+    #forkongithub a::after {
+        bottom: 1px;
+        top: auto;
+    }
+    
+    @media screen and (min-width:800px) {
+        #forkongithub {
+            position: fixed;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 240px;
+            overflow: hidden;
+            height: 240px;
+            z-index: 9999;
+        }
+        #forkongithub a {
+            width: 240px;
+            position: absolute;
+            top: 50px;
+            left: -60px;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+        }
+    }
+    </style>
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />-->
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"></link>
+
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -32,7 +100,9 @@
 </head>
 
 <body id="page-top" class="index">
-
+    <span id="forkongithub">
+        <a href="https://github.com/LinaC404">Fork me on GitHub</a>
+    </span>
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
         <div class="container">
@@ -194,25 +264,19 @@
                         <h3>Around the Web</h3>
                         <ul class="list-inline">
                             <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                                <a href="mailto:linachen504@gmail.com" class="btn-social btn-outline"><i class="fa fa-fw fa-envelope"></i></a>
                             </li>
                             <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                            </li>
+                                <a href="https://github.com/LinaC404" class="btn-social btn-outline"><i class="fa fa-github"></i></a>
+                            </li>                            
                             <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                                <a href="https://www.zhihu.com/people/chen-li-nuo-62-43" class="btn-social btn-outline"><i class="fab fa-zhihu"></i></a>
                             </li>
                         </ul>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>Yourname</h3>
-                        <p><a href="http://startbootstrap.com">Yourname</a>.</p>
+                        <h3>Hello</h3>
+                        <p><a href="#">I am Lina Chen.</a></p>
                     </div>
                 </div>
             </div>
@@ -221,7 +285,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; Your Website 2016
+                        <i class="fas fa-copyright"></i> &nbsp; 2021
                     </div>
                 </div>
             </div>

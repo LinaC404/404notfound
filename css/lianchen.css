@@ -1,0 +1,89 @@
+#forkongithub a {
+    background: #B4B4AF;
+    color: #fff;
+    text-decoration: none;
+    font-family: arial, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 40px;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    position: relative;
+    transition: 0.5s;
+}
+
+#forkongithub a:hover {
+    background: #18bc9c;
+    color: #fff;
+}
+
+#forkongithub a::before,
+#forkongithub a::after {
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    height: 1px;
+    background: #fff;
+}
+
+#forkongithub a::after {
+    bottom: 1px;
+    top: auto;
+}
+
+@media screen and (min-width:800px) {
+    #forkongithub {
+        position: fixed;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 240px;
+        overflow: hidden;
+        height: 240px;
+        z-index: 9999;
+    }
+    #forkongithub a {
+        width: 240px;
+        position: absolute;
+        top: 50px;
+        left: -60px;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+    }
+}
+
+.weixin {
+    position: relative;
+}
+ 
+.weixin img.qrcode {
+  position: absolute;
+  z-index: 99;
+  top: -26rem;
+  right: 0rem;
+  width: 24rem;
+  max-width: 500px;
+  height: 25rem;
+  max-height: 500px;
+  transform: scale(0);
+  transform-origin:  center;
+  opacity: 0;
+  border: .3125rem solid #ffffff;
+  border-radius: 1rem;
+  -webkit-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+ 
+}
+ 
+.weixin:hover img.qrcode {
+    transform: scale(1);
+    opacity: 1;
+}

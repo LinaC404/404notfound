@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Lina Chen's Timeline</title>
+
+  <style>
+    body, html {
+      font-family: arial, sans-serif;
+      font-size: 11pt;
+    }
+
+    div.vis-editable,
+    div.vis-editable.vis-selected {
+      /* custom styling for editable items... */
+    }
+
+    div.vis-readonly,
+    div.vis-readonly.vis-selected {
+      /* custom styling for readonly items... */
+      background-color: #ff4500;
+      border-color: red;
+      color: white;
+    }
+  </style>
+
+  <script src="js/vis-timeline-graph2d.min.js"></script>
+  <link href="css/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
+  
+</head>
+<body>
+
+<div id="visualization"></div>
+
+<script>
+  // create groups to highlight groupUpdate
+  var groups = new vis.DataSet([
+    {id: 1, content: 'Me'},
+    {id: 2, content: 'In China'},
+    {id: 3, content: 'Japan'},
+    {id: 4, content: 'Doing...'}
+  ]);
+  // create a DataSet with items
+  var items = new vis.DataSet([
+    {id: 1, content: 'I was born', editable: false, start: '1996-12-31', group: 1},
+    {id: 2, content: 'Student (China)', editable: false, start: '2002-09-01', end: '2018-06-20', group: 2},
+    {id: 3, content: 'Student', editable: false, start: '2018-09-28', group: 3},
+    {id: 4, content: 'Find something interesting', editable: false, start: '2022-01-01', group: 4},
+  ]);
+
+  var container = document.getElementById('visualization');
+  var options = {
+    start: '1993-12-31',
+    end: '2030-01-01',
+    editable: false   // default for all items
+  };
+  // timeline = new vis.Timeline(container, items, null, options);
+
+  var timeline = new vis.Timeline(container, items, groups, options);
+</script>
+</body>
+</html>

@@ -28,6 +28,23 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
+    <!-- Timeline -->
+    <link href="css/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        div.vis-editable,
+        div.vis-editable.vis-selected {
+          /* custom styling for editable items... */
+        }
+    
+        div.vis-readonly,
+        div.vis-readonly.vis-selected {
+          /* custom styling for readonly items... */
+          background-color: #ff4500;
+          border-color: red;
+          color: white;
+        }
+    </style>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -277,7 +294,9 @@
                         <div class="modal-body">
                             <h2>Project Title</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/P2.jpg" class="img-responsive img-centered" alt="">
+                            <!-- <img src="img/portfolio/P2.jpg" class="img-responsive img-centered" alt=""> -->
+                            <iframe src="individualEditableItems.html" width="100%" height="264px;" name="My Timeline" scrolling="no">   
+                            </iframe>
                             <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
                             <ul class="list-inline item-details">
                                 <li>Client:
@@ -349,6 +368,9 @@
 
     <!-- Theme JavaScript -->
     <script src="js/freelancer.min.js"></script>
+
+    <!-- Timeline JavaScript -->
+    <script src="js/vis-timeline-graph2d.min.js"></script>
 
 </body>
 

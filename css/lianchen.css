@@ -269,3 +269,24 @@ svg{
         top:106%
     }
 }
+
+.btn-download-lg{
+    padding:10px 16px;
+    font-size:18px;
+    line-height:1.3333333;
+    border-radius:6px
+}
+
+.btn-download-outline{
+    color:#2381c0;
+    font-size:20px;
+    border:2px solid #2381c0;
+    background:0 0;
+    transition:all .3s ease-in-out;
+    margin-top:15px
+}
+.btn-download-outline.active,.btn-download-outline:active,.btn-download-outline:focus,.btn-download-outline:hover{
+    color:#fff;
+    background:#2381c0;
+    border:2px solid #2381c0
+}

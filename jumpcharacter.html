@@ -26,7 +26,7 @@
     </style>
 </head>
 <body id='jump'>
-    <svg width="500" height="500"></svg>
+    <svg width="750" height="200"></svg>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script>
         var svg = d3.select("svg"),
@@ -72,8 +72,8 @@
 
         // Update element from mylist
         var temp = 0;
-        // var mylist = ["I am Lina Chen", "I like PYTHON","& Classic novel...", "Let's create STH fun", ":)"];
-        var mylist = ["Hello", "Here is my CV", ":)"]
+        var mylist = ["Hello", "I am Lina Chen", "I like PYTHON","& Classic novel...", "Let's create STH fun", ":)"];
+        // var mylist = ["Hello", "Here is my CV", ":)"]
 
         d3.interval(function() {
             update(mylist[temp]); 

@@ -1,3 +1,4 @@
+/*Github*/
 #forkongithub a {
     background: #B4B4AF;
     color: #fff;
@@ -59,6 +60,7 @@
     }
 }
 
+/*Weixin CSS*/
 .weixin {
     position: relative;
 }
@@ -101,6 +103,7 @@
     -webkit-border-radius: 50%;
 }
 
+/*Timeline CSS*/
 #timeline{
     margin: 0;
     padding: 0;
@@ -111,7 +114,7 @@
 
 .box{
     margin:0 10%;
-    height: 1000px;
+    height: 2000px;
     font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;
     overflow: hidden;
     padding: 10px 0 40px 60px
@@ -270,6 +273,7 @@ svg{
     }
 }
 
+/*Download button*/
 .btn-download-lg{
     padding:10px 16px;
     font-size:18px;
@@ -290,3 +294,43 @@ svg{
     background:#2381c0;
     border:2px solid #2381c0
 }
+
+/*Motivation*/
+.statement{
+    text-align: justify;
+    /* width: 100px; */
+}
+.statement > span{
+    display: inline-block /* Opera */;
+    /* padding-left: 100%; */
+}
+.record{
+    font-size: 20px;
+    text-align: justify;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+    width: 20px;
+}
+  
+::-webkit-scrollbar-track {
+background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: #d6dee1;
+border-radius: 20px;
+border: 6px solid transparent;
+background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background-color: #a8bbbf;
+}
+

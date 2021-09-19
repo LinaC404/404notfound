@@ -4,7 +4,7 @@ var upArrow = document.getElementById("btn2");
 
 downArrow.onclick = function () {
     'use strict';
-    document.getElementById("first-list").style = "top:-620px";
+    document.getElementById("first-list").style = "top:-1000px";
     document.getElementById("second-list").style = "top:-620px";
     downArrow.style = "display:none";
     upArrow.style = "display:block";

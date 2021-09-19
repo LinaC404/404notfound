@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+    <style>
+    #jump{
+        margin: 0;
+        padding: 0;
+        background-color:#ffffff;
+    }
+
+    text {
+    font: bold 36px monospace;
+    }
+
+    .enter {
+    fill: #2381c0;
+    }
+
+    .update {
+    fill: #99CC99;
+    }
+
+    .exit {
+    fill: #FF6666;
+    }
+    </style>
+</head>
+<body id='jump'>
+    <svg width="500" height="500"></svg>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script>
+        var svg = d3.select("svg"),
+        width = +svg.attr("width"),
+        height = +svg.attr("height"),
+        g = svg.append("g").attr("transform", "translate(32," + (height / 2) + ")");
+
+        function update(data) {
+        var t = d3.transition()
+            .duration(750);
+
+        // JOIN new data with old elements.
+        var text = g.selectAll("text")
+            .data(data, function(d) { return d; });
+
+        // EXIT old elements not present in new data.
+        text.exit()
+            .attr("class", "exit")
+            .transition(t)
+            .attr("y", 60)
+            .style("fill-opacity", 1e-6)
+            .remove();
+
+        // UPDATE old elements present in new data.
+        text.attr("class", "update")
+            .attr("y", 0)
+            .style("fill-opacity", 1)
+            .transition(t)
+            .attr("x", function(d, i) { return i * 32; });
+
+        // ENTER new elements present in new data.
+        text.enter().append("text")
+            .attr("class", "enter")
+            .attr("dy", ".35em")
+            .attr("y", -60)
+            .attr("x", function(d, i) { return i * 32; })
+            .style("fill-opacity", 1e-6)
+            .text(function(d) { return d; })
+            .transition(t)
+            .attr("y", 0)
+            .style("fill-opacity", 1);
+        }
+
+        // Update element from mylist
+        var temp = 0;
+        // var mylist = ["I am Lina Chen", "I like PYTHON","& Classic novel...", "Let's create STH fun", ":)"];
+        var mylist = ["Hello", "Here is my CV", ":)"]
+
+        d3.interval(function() {
+            update(mylist[temp]); 
+            temp = temp + 1;
+            if (temp == mylist.length){
+                temp=0
+            }
+        }, 1500);
+    </script>
+</body>
+</html>
+

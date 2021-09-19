@@ -304,15 +304,15 @@ svg{
     display: inline-block /* Opera */;
     /* padding-left: 100%; */
 }
-#record{
+/* #record{
     font-size: 20px;
     text-align: justify;
     display: block;
-}
-#transcript{
+}*/
+/* #transcript{
     text-align: left;
     font-size: 20px;
-}
+} */
 /* custom scrollbar */
 ::-webkit-scrollbar {
     width: 20px;
